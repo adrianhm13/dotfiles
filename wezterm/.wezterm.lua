@@ -2,6 +2,8 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
+local os_name = wezterm.target_triple
+
 config.colors = {
 	foreground = "#c8d3f5",
 	background = "#222436",
@@ -62,20 +64,31 @@ config.colors = {
 	},
 }
 
-config.font = wezterm.font("Hack Nerd Font")
-config.font_size = 13
+config.font = wezterm.font("Hack Nerd Font Mono")
+config.font_size = 15
 
 config.enable_tab_bar = false
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 1
 config.macos_window_background_blur = 10
+config.window_background_opacity = 1.0
 
-config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
-}
+if string.find(os_name, "apple") then
+	config.window_padding = {
+		left = 0,
+		right = 0,
+		top = 8,
+		bottom = 0,
+	}
+	config.font_size = 15
+elseif string.find(os_name, "linux") then
+	config.window_padding = {
+		left = 0,
+		right = 0,
+		top = 0,
+		bottom = 0,
+	}
+	config.font_size = 13
+end
 
 return config
