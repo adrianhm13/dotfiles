@@ -21,6 +21,7 @@ font pango:Hack Nerd Font 12
 
 exec --no-startup-id picom
 exec_always --no-startup-id $HOME/.config/polybar/launch_polybar.sh
+exec_always feh --bg-scale $HOME/.config/backgrounds/background.png
 bindsym $mod+space exec rofi -show combi
 
 # Start XDG autostart .desktop files using dex. See also
