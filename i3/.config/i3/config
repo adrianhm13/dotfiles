@@ -19,6 +19,9 @@ font pango:Hack Nerd Font 12
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+# Start redshift-gtk for eye-protection
+exec --no-startup-id redshift-gtk -t 2500:2500
+
 exec --no-startup-id picom
 exec_always --no-startup-id $HOME/.config/polybar/launch_polybar.sh
 exec_always feh --bg-scale $HOME/.config/backgrounds/background.png
@@ -28,9 +31,6 @@ bindsym $mod+space exec rofi -show combi
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-# Start redshift and redshift-gtk for eye-protection
-exec --no-startup-id redshift
-exec --no-startup-id redshift-gtk
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
