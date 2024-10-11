@@ -64,8 +64,8 @@ config.colors = {
 	},
 }
 
-config.font = wezterm.font("Hack Nerd Font Mono")
-config.font_size = 15
+config.font = wezterm.font("Monaspace Neon", { weight = "Regular" })
+config.font_size = 13
 
 config.enable_tab_bar = false
 
@@ -73,22 +73,22 @@ config.window_decorations = "RESIZE"
 config.macos_window_background_blur = 10
 config.window_background_opacity = 1.0
 
-if string.find(os_name, "apple") then
-	config.window_padding = {
-		left = 0,
-		right = 0,
-		top = 8,
-		bottom = 0,
-	}
-	config.font_size = 15
-elseif string.find(os_name, "linux") then
-	config.window_padding = {
-		left = 0,
-		right = 0,
-		top = 0,
-		bottom = 0,
-	}
-	config.font_size = 13
-end
+-- if string.find(os_name, "apple") then
+config.window_padding = {
+	left = 0,
+	right = 0,
+	top = 8,
+	bottom = 0,
+}
+-- 	config.font_size = 15
+-- elseif string.find(os_name, "linux") then
+-- 	config.window_padding = {
+-- 		left = 0,
+-- 		right = 0,
+-- 		top = 0,
+-- 		bottom = 0,
+-- 	}
+-- 	config.font_size = 13
+-- end
 
 return config
