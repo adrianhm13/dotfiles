@@ -7,7 +7,7 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
-alias nvim='nvim --listen /tmp/nvim-server.pipe'
+alias nvim='nvim --listen 0'
 alias ls lsd
 alias lst "lsd --tree"
 alias la "ls -A"
