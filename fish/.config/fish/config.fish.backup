@@ -36,6 +36,3 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     set fish_prompt_pwd_dir_length 0
 end
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/adrian/google-cloud-sdk/path.fish.inc' ]; . '/home/adrian/google-cloud-sdk/path.fish.inc'; end
